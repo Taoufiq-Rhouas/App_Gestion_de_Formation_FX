@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="34.0" layoutY="46.0" prefHeight="231.0" prefWidth="77.0" spacing="15.0">
+               <children>
+                  <Label text="ID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Libelle">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Description">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="120.0" layoutY="46.0" prefHeight="232.0" prefWidth="134.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="tflid" />
+                  <TextField fx:id="tfllibelle" layoutX="10.0" layoutY="10.0" />
+                  <TextField fx:id="tfldescription" layoutX="10.0" layoutY="35.0" />
+               </children>
+            </VBox>
+            <TableView fx:id="tvFormation" layoutX="284.0" layoutY="46.0" onMouseClicked="#handeleMousseAction" prefHeight="319.0" prefWidth="368.0">
+              <columns>
+                <TableColumn fx:id="colid" prefWidth="81.0" text="ID" />
+                <TableColumn fx:id="collibelle" prefWidth="93.0" text="Libelle" />
+                  <TableColumn fx:id="coldescription" prefWidth="95.0" text="Description" />
+                  <TableColumn fx:id="colstatus" prefWidth="95.0" text="Status" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnInsert" layoutX="27.0" layoutY="279.0" mnemonicParsing="false" onAction="#handeleButtonAction" prefHeight="25.0" prefWidth="65.0" text="insert" />
+            <Button fx:id="btnUpdate" layoutX="107.0" layoutY="279.0" mnemonicParsing="false" onAction="#handeleButtonAction" prefHeight="25.0" prefWidth="65.0" text="update" />
+            <Button fx:id="btnDelete" layoutX="182.0" layoutY="279.0" mnemonicParsing="false" onAction="#handeleButtonAction" prefHeight="25.0" prefWidth="72.0" text="delete" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
