@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      tbody > tr {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-light mb-5">
+      <div class="container">
+        <span class="navbar-brand mb-0 h1">YouCode Formation</span>
+      </div>
+    </nav>
+    <div class="container">
+      <h2 class="text-center"><%= title %></h2>
+
+      <table class="table table-light table-striped">
+        <thead class="bg-dark">
+          <tr>
+            <th class="text-light">Libelle</th>
+            <th class="text-light">Description</th>
+            <th class="text-light">Ville</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% formations.forEach(function(formation){ %>
+          <tr id="<%= formation.ville %>">
+            <td><%= formation.libelle %></td>
+            <td><%= formation.description %></td>
+            <td><%= formation.ville %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+    <div class="container my-5">
+      <iframe style="height: 500px" class="w-100" id="map"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Footer Content</h5>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+              molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+              voluptatem veniam, est atque cumque eum delectus sint!
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-dark">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-dark">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-dark">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2021 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">YouCode.ma</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      let safi = {
+        x: "32.29740462539648",
+        y: "-9.233969451787024",
+      };
+      let agadir = {
+        x: "30.424250302361035",
+        y: "-9.59191950518671",
+      };
+      let tanger = {
+        x: "35.774346561838954",
+        y: "-5.786970071038289",
+      };
+      let casablanca = {
+        x: "33.56423913535208",
+        y: "-7.66089451123138",
+      };
+
+      let map = document.getElementById("map");
+      map.src = `https://yassinaibi.github.io/gestion-de-formation-map/index.html?X=${safi.x}&Y=${safi.y}`;
+
+      function ville(thisCity, city) {
+        document.getElementById(thisCity).onclick = function () {
+          map.src = `https://yassinaibi.github.io/gestion-de-formation-map/index.html?X=${city.x}&Y=${city.y}`;
+        };
+      }
+      ville("safi", safi);
+      ville("agadir", agadir);
+      ville("tanger", tanger);
+      ville("casablanca", casablanca);
+    </script>
+  </body>
+</html>
