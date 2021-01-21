@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <bottom>
+      <Pane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #2c344b;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="171.0" prefWidth="800.0" style="-fx-background-color: #43bb73;">
+               <children>
+                  <Text layoutX="76.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des employée" wrappingWidth="687.13671875">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#721b1b" />
+                              <Stop color="#686868" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <font>
+                        <Font name="Arial Bold" size="58.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Circle layoutX="400.0" layoutY="349.0" radius="123.0" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#721b1b" />
+                        <Stop color="#00ff62" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#721b1b" />
+                        <Stop color="#00ff8c" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Circle>
+            <Text layoutX="345.0" layoutY="342.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#721b1b" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Button fx:id="btnAdmin" layoutX="297.0" layoutY="321.0" mnemonicParsing="false" onAction="#handeleButtonAction" opacity="0.7" prefHeight="56.0" prefWidth="207.0" style="-fx-background-color: transparent;" text="ADMIN">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#721b1b" />
+                        <Stop color="#908f8f" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Circle layoutX="400.0" layoutY="639.0" radius="123.0" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#721b1b" />
+                        <Stop color="#00ff62" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#721b1b" />
+                        <Stop color="#00ff8c" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Circle>
+            <Button fx:id="btnEmployee" layoutX="297.0" layoutY="611.0" mnemonicParsing="false" onAction="#handeleButtonAction" opacity="0.7" prefHeight="56.0" prefWidth="207.0" style="-fx-background-color: transparent;" text="EMPLOYEE">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#721b1b" />
+                        <Stop color="#908f8f" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></Pane>
+   </bottom>
+</BorderPane>

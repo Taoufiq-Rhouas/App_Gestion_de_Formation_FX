@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <top>
+      <Pane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #2c344b;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="logIn" layoutY="698.0" mnemonicParsing="false" onAction="#LogIn" prefHeight="67.0" prefWidth="800.0" style="-fx-background-color: #43bb73;" text="Login" textFill="#e8e8e8">
+               <font>
+                  <Font size="47.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="180.0" fitWidth="191.0" layoutX="310.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/admineFX2.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="75.0" layoutY="267.0" opacity="0.91" prefHeight="77.0" prefWidth="686.0" promptText="entrer votre pseudo" style="-fx-background-color: #FFF; -fx-border-color: #7f8c8d;">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="75.0" layoutY="362.0" opacity="0.91" prefHeight="77.0" prefWidth="686.0" promptText="entrer votre mot de pass" style="-fx-background-color: #FFF; -fx-border-color: #7f8c8d;">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>
